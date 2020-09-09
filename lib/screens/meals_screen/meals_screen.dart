@@ -21,17 +21,18 @@ class MealsScreen extends StatelessWidget {
         .where((element) => element.categories.contains(routeArgCategory.id))
         .toList();
 
-    return CupertinoPageScaffold(
-        navigationBar: CupertinoNavigationBar(
-          middle: Text('${routeArgCategory.title} Meals'),
-        ),
-        child: ListView.builder(
-          itemBuilder: (ctx, index) {
-            return MealItem(
-              mealsForCategory[index],
-            );
-          },
-          itemCount: mealsForCategory.length,
-        ));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('${routeArgCategory.title} Meals'),
+      ),
+      body: ListView.builder(
+        itemBuilder: (ctx, index) {
+          return MealItem(
+            mealsForCategory[index],
+          );
+        },
+        itemCount: mealsForCategory.length,
+      ),
+    );
   }
 }

@@ -103,7 +103,10 @@ class MealItem extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Icon(CupertinoIcons.clock),
+                      Icon(
+                        Icons.access_time,
+                        color: Theme.of(context).accentColor,
+                      ),
                       SizedBox(
                         width: 6,
                       ),
@@ -117,7 +120,10 @@ class MealItem extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(CupertinoIcons.gear),
+                      Icon(
+                        Icons.equalizer,
+                        color: Theme.of(context).accentColor,
+                      ),
                       SizedBox(
                         width: 6,
                       ),
@@ -128,7 +134,10 @@ class MealItem extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Icon(CupertinoIcons.shopping_cart),
+                      Icon(
+                        Icons.shopping_cart,
+                        color: Theme.of(context).accentColor,
+                      ),
                       SizedBox(
                         width: 9,
                       ),
